@@ -3,6 +3,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -38,6 +39,16 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'comma-dangle': [
+            'warn',
+            {
+                arrays: 'only-multiline',
+                objects: 'only-multiline',
+                imports: 'only-multiline',
+                exports: 'only-multiline',
+                functions: 'only-multiline',
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
