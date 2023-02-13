@@ -1,4 +1,6 @@
 {
-  "Translate": "English",
-  "Main": "Главная"
+    "Translate": "English",
+    "Main": "Главная",
+    "Page Not Found": "Страница не найдена",
+    "Something went wrong": "Что-то пошло не так"
 }
