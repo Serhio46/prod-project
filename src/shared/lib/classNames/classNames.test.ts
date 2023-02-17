@@ -17,7 +17,7 @@ describe('classNames', () => {
             expected
         );
     });
-    test('with mods dalse', () => {
+    test('with mods false', () => {
         const expected = 'someClass class3 class2';
         expect(
             classNames('someClass', { class2: true, scrollable: false }, [
