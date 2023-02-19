@@ -11,7 +11,8 @@
         "lint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix",
         "test:unit": "jest --config ./config/jest/jest.config.ts",
         "test:ui": "loki test",
-        "test:approve": "loki approve",
+        "test:ui:ok": "loki approve",
+        "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
         "analyze": " webpack --env mode=development analyze=1",
         "storybook": "start-storybook -p 6006 -c ./config/storybook",
         "storybook:build": "build-storybook -c ./config/storybook"
