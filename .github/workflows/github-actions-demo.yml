@@ -12,7 +12,7 @@ jobs:
         strategy:
             matrix:
                 node-version: [17.x]
-                registry-url: https://npm.pkg.github.com/
+                registry-url: 'https://npm.pkg.github.com/'
 
         steps:
             - uses: actions/checkout@v2
