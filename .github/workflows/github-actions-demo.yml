@@ -12,6 +12,7 @@ jobs:
         strategy:
             matrix:
                 node-version: [17.x]
+                registry-url: https://npm.pkg.github.com/
 
         steps:
             - uses: actions/checkout@v2
@@ -20,7 +21,9 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
             - name: install modules
-              run: npm ci --ignore-scripts
+              run: npm i
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.PROD_PRIVATE_READ_TOKEN }}
             - name: build production project
               run: npm run build:prod
             - name: linting typescript
