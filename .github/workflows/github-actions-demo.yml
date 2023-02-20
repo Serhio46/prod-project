@@ -19,7 +19,7 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.PROD_PRIVATE_READ_TOKEN }}" >> .npmrc
+                  registry-url: https://registry.npmjs.org
             - name: install modules
               run: npm i
             - name: build production project
