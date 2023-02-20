@@ -1,6 +1,6 @@
-import buildScssLoader from '../build/loaders/buildScssLoader';
 import path from 'path';
 import webpack, { RuleSetRule } from 'webpack';
+import buildScssLoader from '../build/loaders/buildScssLoader';
 import { BuildPaths } from '../build/types/config';
 
 export default ({ config }: { config: webpack.Configuration }) => {
