@@ -19,8 +19,9 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
-                  registry-url: https://registry.npmjs.org
             - name: install modules
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PROD_PRIVATE_READ_TOKEN }}
               run: npm i
             - name: build production project
               run: npm run build:prod
